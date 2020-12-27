@@ -25,9 +25,9 @@ nav {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  height: 3em;
+  height: 5em;
   font-family: var(--body-font-family);
-  padding: 40px 80px 0px 80px;
+  padding: 40px;
 }
 
 .nav__container {
@@ -485,7 +485,7 @@ nav {
 
 }
 
-.footer__container1 {
+.footer__container__top__row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -493,11 +493,11 @@ nav {
   margin-bottom: 5em;
 }
 
-.footer__container1 div {
+.footer__container__top__row div {
   width: 50%;
 }
 
-.footer__container__a {
+.footer__container__top__row__A {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -521,7 +521,7 @@ nav {
   font-size: 18px;
 }
 
-.footer__container__b {
+.footer__container__top__row__B {
   text-align: right;
   flex-wrap: wrap;
   align-items: center;
@@ -582,7 +582,7 @@ nav {
   height: 300px;
 }
 
-.footer__container__c {
+.footer__container__bottom__row {
   display: flex;
   flex-direction: column;
   width: 25%;
@@ -600,13 +600,13 @@ nav {
   cursor: pointer;
 }
 
-.footer__container__c h3 {
+.footer__container__bottom__row h3 {
   font-size: 20px;
   font-family: var(--body-font-family);
   font-weight: 900;
 }
 
-.footer__container__c h4 {
+.footer__container__bottom__row h4 {
   font-family: var(--body-font-family);
   color: var(--gray);
   font-weight: 500;
@@ -614,24 +614,24 @@ nav {
   letter-spacing: 0.01em;
 }
 
-.footer__container__c h5 {
+.footer__container__bottom__row h5 {
   font-size: 16px;
   font-family: var(--body-font-family);
   margin-bottom: 1em;
 }
 
-.footer__container__c p {
+.footer__container__bottom__row p {
   font-family: var(--body-font-family);
   color: var(--gray);
   margin-top: 10px;
 }
 
-.footer__container__c li {
+.footer__container__bottom__row li {
   list-style: none;
   font-size: 16px;
 }
 
-.footer__container__c a {
+.footer__container__bottom__row a {
   font-size: 16px;
   line-height: 250%;
   text-decoration: none;
@@ -639,7 +639,7 @@ nav {
   color: var(--gray);
 }
 
-.footer__container__c a:hover {
+.footer__container__bottom__row a:hover {
   color: black;
   font-weight: bold;
 }
@@ -678,6 +678,8 @@ nav {
   .burger {
     display: block;
     cursor: pointer;
+
+
   }
 
   .hero__title {
@@ -708,6 +710,13 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  
+  /*--- NAV SECTION ---*/
+
+  .nav__container {
+    grid-template-columns: 50px 200px;
+  }
+
   /*--- STORAGE SECTION ----*/
 
   .storage__content {
@@ -787,7 +796,7 @@ nav {
     max-width: 100%;
   }
 
-  .footer__container__b {
+  .footer__container__2b {
     text-align: center;
     padding: 0;
   }
@@ -795,9 +804,16 @@ nav {
   .footer__container2 {
     flex-wrap: wrap;
   }
+
+  .footer__container__bottom__row h3 {
+    font-size: 18px;
+
+  }
+
 }
 
 @media screen and (max-width: 600px) {
+
 
   /*--- STORAGE SECTION ---*/
   .storage__content {
@@ -873,17 +889,25 @@ nav {
   }
 
 
-  .footer__container__c a {
+  .footer__container__bottom__row a {
     font-size: 10px;
   }
 
-  .footer__container__2 {
-    /* display: block; */
-  }
+
 
   .footer__social__icons {
     height: 30px;
     width: 30px;
   }
+
+  .footer__container__bottom__row h3 {
+    font-size: 12px;
+
+  }
+
+  #email {
+    font-size: 10px;
+  }
+
 
 }

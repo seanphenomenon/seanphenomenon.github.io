@@ -4,24 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- My CSS Styles -->
+  <!-- My CSS STYLES -->
   <link rel="stylesheet" href="styles.css" />
   <title>Click Up: Mini-Project</title>
 </head>
 
 <body>
+  <!-- START OF HEADER  -->
   <header>
     <nav>
       <div class="nav__container">
-        <div class="nav__logo--active">
-          <a href='#'>
-            <img src="/images/Rectangle 32.svg" />
-            <span>
-              <img src="/images/Rectangle 33.svg" />
-            </span>
-          </a>
-        </div>
-        <div>
+
+        <!-- LOGO PLACEMENT -->
+        <span>
+          <div class="nav__logo--active">
+            <a href='#'>
+              <img src="/images/Rectangle 32.svg" />
+              <span>
+                <img src="/images/Rectangle 33.svg" />
+              </span>
+            </a>
+          </div>
+        </span>
+        <!-- END OF LOGO PLACEMENT -->
+
+        <!-- NAVIGATION LINKS -->
+        <nav>
           <ul class="nav">
             <li class="nav__item--active">
               <a class="nav__link" href="#">About</a>
@@ -36,7 +44,8 @@
               <a class="nav__link" href="#">Signup</a>
             </li>
           </ul>
-        </div>
+        </nav>
+        <!-- END OF NAVIGATION LINKS -->
       </div>
       <div class="nav__demo__button--active">
         <p>
@@ -46,13 +55,16 @@
           </span>
         </p>
       </div>
-      <div class="burger ">
+      <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
     </nav>
   </header>
+  <!-- END OF HEADER  -->
+
+<!-- START OF THE TOP HERO SECTION -->
   <section>
     <div class="hero__container" style='width: 100%;'>
       <h1 class="hero__title">Save your data storage here.</h1>
@@ -86,6 +98,9 @@
       </div>
     </div>
   </section>
+  <!-- END OF THE TOP HERO SECTION -->
+
+  <!-- START OF FEATURES HEADER SECTION -->
   <section>
     <div class="features__container1">
       <h1 class="features__title">Features</h1>
@@ -95,6 +110,9 @@
       </p>
     </div>
   </section>
+  <!-- END OF FEATURES HEADER SECTION -->
+
+  <!-- START OF FEATURE BOXES SECTION -->
   <section>
     <div class=" features__container2">
       <div class="box__container">
@@ -149,6 +167,9 @@
       </div>
     </div>
   </section>
+  <!-- END OF FEATURES BOXES SECTION -->
+
+  <!-- START OF TESTIMONIALS SECTION -->
   <section class='testimonials__wrapper'>
     <div class='testimonials__container'>
       <h1 class='testimonials__title'> Testimonials</h1>
@@ -190,15 +211,17 @@
       </div>
     </div>
   </section>
+  <!-- END OF TESTIMONIALS SECTION -->
   <hr />
+  <!-- START OF FOOTER -->
   <section>
     <div class='footer__container'>
-      <div class='footer__container1'>
-        <div class='footer__container__a'>
+      <div class='footer__container__top__row'>
+        <div class='footer__container__top__row__A'>
           <h1 class='footer__title'>Try for free!</h1>
           <h6 class='footer__text'> Get limited 1 week free try our features!</h6>
         </div>
-        <div class='footer__container__b'>
+        <div class='footer__container__top__row__B'>
           <div class='footer__learn__button--active'>Learn More</Learn>
           </div>
           <div class=' footer__demo__button--active'>Request Demo<span class='right-arrow'>&#8594;</span>
@@ -206,7 +229,7 @@
         </div>
       </div>
       <div class='footer__container__2'>
-        <div class='footer__container__c' style='align-items:flex-start' id='company-contact'>
+        <div class='footer__container__bottom__row' style='align-items:flex-start' id='company-contact'>
           <div class='footer__logo footer__logo--active'>
             <img src="/images/Rectangle 32.svg" width='20px' style='margin-bottom: 5px; margin-right: 5px;' />
             <span><img src="/images/Rectangle 33.svg" width='20px'
@@ -220,11 +243,11 @@
             <h4>Bahagia Ave Street PRBW 29281</h4>
           </div>
           <div>
-            <p><a href='mailto:info@warehouse.project'>info@warehouse.project</a></p>
+            <p id='email'><a href='mailto:info@warehouse.project'>info@warehouse.project</a></p>
             <p>1-232-3434 (Main)</p>
           </div>
         </div>
-        <div class='footer__container__c' style='justify-content:center'>
+        <div class='footer__container__bottom__row' style='justify-content:center'>
           <div>
             <h5>About</h5>
             <li><a href='#'>Profile</a></li>
@@ -233,7 +256,7 @@
             <li><a href='#'>DW News</a></li>
           </div>
         </div>
-        <div class='footer__container__c' style='margin-top: 4em;'>
+        <div class='footer__container__bottom__row' style='margin-top: 4em;'>
           <h5>Help</h5>
           <div>
             <li><a href='#'>Support</a></li>
@@ -243,7 +266,7 @@
             <li><a href='#'>Q&A</a></li>
           </div>
         </div>
-        <div class='footer__container__c' style='margin-top: 4em; '>
+        <div class='footer__container__bottom__row' style='margin-top: 4em; '>
           <h5>Social Media</h5>
           <div class='footer__social__container'>
             <div class='footer__social__icons'></div>
@@ -253,7 +276,9 @@
         </div>
       </div>
   </section>
-  <!-- Webpack Script-->
+  <!-- END OF FOOTER -->
+
+  <!-- WEBPACK SCRIPT -->
   <script src="dist/bundle.js"></script>
 </body>
 
