@@ -216,8 +216,9 @@ nav {
   padding-left: 15px;
   padding-right: 15px;
 }
-#storage-paragraph{
-  position:relative;
+
+#storage-paragraph {
+  position: relative;
   top: 80px;
 }
 
@@ -479,8 +480,9 @@ nav {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100%;
+  min-height: 100%;
   padding: 40px;
+
 }
 
 .footer__container1 {
@@ -677,10 +679,12 @@ nav {
     display: block;
     cursor: pointer;
   }
-  .hero__title{
-    font-size:50px;
+
+  .hero__title {
+    font-size: 50px;
   }
-  .hero__image{
+
+  .hero__image {
     display: none;
   }
 
@@ -688,12 +692,15 @@ nav {
   .storage__text {
     font-size: 16px;
   }
-  .storage__container{
-    width:100%;
+
+  .storage__container {
+    width: 100%;
   }
-  #storage-paragraph{
+
+  #storage-paragraph {
     top: 0;
   }
+
   /*--- TESTIMONIALS SECTION ---*/
   .card-container__jenny {
     width: 260px;
@@ -727,7 +734,7 @@ nav {
     max-width: 100%;
   }
 
-  
+
 
   /*--- FEATURES SECTION ---*/
 
@@ -784,36 +791,45 @@ nav {
     text-align: center;
     padding: 0;
   }
+
+  .footer__container2 {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 600px) {
+
+  /*--- STORAGE SECTION ---*/
   .storage__content {
     height: 5%;
   }
 
   .storage__title {
     font-size: 22px;
-    padding:10px;
+    padding: 10px;
     width: 480px;
   }
 
   .storage__text {
     font-size: 16px;
-    padding:10px;
+    padding: 10px;
   }
-  .storage__container{
-    padding:15px;
-    margin:0
+
+  .storage__container {
+    padding: 15px;
+    margin: 0
   }
 
   .content .col {
-   padding: 0;
-   max-width: 430px;
-   
+    padding: 0;
+    max-width: 430px;
+
   }
-  .col img{
-    width:400px;
+
+  .col img {
+    width: 400px;
   }
+
   /*--- FEATURES SECTION ---*/
 
   .box__image img {
@@ -844,6 +860,30 @@ nav {
 
   .card__content {
     padding: 0;
+  }
+
+  /*--- FOOTER SECTION ---*/
+  .footer__logo {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  #company-contact {
+    font-size: 10px;
+  }
+
+
+  .footer__container__c a {
+    font-size: 10px;
+  }
+
+  .footer__container__2 {
+    /* display: block; */
+  }
+
+  .footer__social__icons {
+    height: 30px;
+    width: 30px;
   }
 
 }
