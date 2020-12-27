@@ -641,6 +641,7 @@ nav {
   text-decoration: none;
   font-family: var(--body-font-family);
   color: var(--gray);
+  line-height: 30px;
 }
 
 .footer__container__bottom__row a:hover {
