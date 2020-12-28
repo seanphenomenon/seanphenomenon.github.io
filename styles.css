@@ -184,7 +184,7 @@ nav {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  width: 100%;
+  /* width: 100%; */
   max-width: 1117px;
   margin: 0 auto;
   padding-left: 15px;
@@ -684,8 +684,22 @@ nav {
     cursor: pointer;
   }
 
+  /* HERO SECTION */
+  .hero__container {
+    margin-bottom: 0;
+    align-items: center;
+    height: 100vh;
+  }
+
   .hero__title {
-    font-size: 50px;
+    text-align: center;
+  }
+
+  .hero__text {
+    /* width: 100%; */
+    line-height: 40px;
+    font-size: px;
+    margin-bottom: 3em;
   }
 
   .hero__image {
@@ -698,7 +712,8 @@ nav {
   }
 
   .storage__container {
-    width: 100%;
+    margin-left: 2em;
+    margin-right: 2em;
   }
 
   #storage-paragraph {
@@ -725,16 +740,17 @@ nav {
     grid-template-columns: 50px 200px;
   }
 
+  /*--- HERO SECTION ---*/
+  .hero__container {
+    align-items: center;
+  }
+
   /*--- STORAGE SECTION ----*/
 
   .storage__content {
     max-height: 100%;
     flex-basis: 1;
     order: 2;
-  }
-
-  .storage__title {
-    font-size: 30px;
   }
 
   .storage__text {
@@ -752,6 +768,10 @@ nav {
   }
 
   /*--- FEATURES SECTION ---*/
+
+  .features__container1 {
+    height: 100%;
+  }
 
   .box__container {
     padding: 30px;
@@ -838,20 +858,18 @@ nav {
 
 @media screen and (max-width: 600px) {
   /*-- TOP HERO SECTION --*/
+  .hero__container {
+    margin-bottom: 2em;
+  }
 
-  .hero__text {
-    width: 330px;
+  .hero__title {
+    font-size: 60px;
   }
 
   /*--- STORAGE SECTION ---*/
-  .storage__content {
-    height: 100;
-  }
 
   .storage__title {
-    font-size: 22px;
     padding: 10px;
-    width: 480px;
   }
 
   .storage__text {
@@ -860,17 +878,18 @@ nav {
   }
 
   .storage__container {
-    padding: 10px;
-    margin: 0;
+    padding: 25px;
+    margin-left: 2em;
+    display: block;
   }
 
   .content .col {
     padding: 0;
-    max-width: 430px;
   }
 
-  .col img {
-    max-width: 400px;
+  .content img {
+    max-width: 100%;
+    padding-right: 25px;
   }
 
   /*--- FEATURES SECTION ---*/
