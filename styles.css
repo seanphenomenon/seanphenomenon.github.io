@@ -663,8 +663,25 @@ nav {
   display: inline-block;
 }
 
+@media screen and (max-width: 1024px) {
+  /*--- HERO SECTION ---*/
+  .hero__container {
+    height: 100%;
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  /*--- STORAGE SECTION --*/
+  .storage__container {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
 @media screen and (max-width: 992px) {
-  /* --- NAV STATION ---*/
+  /* --- NAV SECTION ---*/
   .nav {
     visibility: hidden;
   }
@@ -692,11 +709,11 @@ nav {
   }
 
   .hero__title {
-    text-align: center;
+    text-align: left;
   }
 
   .hero__text {
-    /* width: 100%; */
+    width: 100%;
     line-height: 40px;
     font-size: px;
     margin-bottom: 3em;
@@ -743,6 +760,7 @@ nav {
   /*--- HERO SECTION ---*/
   .hero__container {
     align-items: center;
+    height: 100%;
   }
 
   /*--- STORAGE SECTION ----*/
@@ -755,6 +773,7 @@ nav {
 
   .storage__text {
     font-size: 16px;
+    max-width: 100%;
   }
 
   .storage__container {
@@ -786,6 +805,12 @@ nav {
     width: 200px;
   }
 
+  .box__container {
+    height: 100%;
+    padding: 40px;
+    flex-direction: column;
+  }
+
   /*--- TESTIMONIALS SECTION ---*/
 
   .testimonials__container {
@@ -803,13 +828,13 @@ nav {
 
   .card-container {
     margin: 10px;
+    border: 25px;
   }
 
   .card-container__jenny {
     width: 100%;
     opacity: 100%;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-radius: 20px;
     background: var(--white);
   }
 
@@ -860,10 +885,18 @@ nav {
   /*-- TOP HERO SECTION --*/
   .hero__container {
     margin-bottom: 2em;
+    height: 100%;
+    padding: 20px;
+    align-items: flex-start;
   }
 
   .hero__title {
     font-size: 60px;
+    text-align: left;
+  }
+
+  .hero-text {
+    width: 100%;
   }
 
   /*--- STORAGE SECTION ---*/
@@ -890,20 +923,27 @@ nav {
   .content img {
     max-width: 100%;
     padding-right: 25px;
+    height: 300px;
   }
 
   /*--- FEATURES SECTION ---*/
 
+  .features__container1 {
+    margin: 0;
+  }
+
+  .features__text {
+    text-align: left;
+    padding: 15px;
+    max-height: 100%;
+  }
+
   .box__image img {
-    width: 105px;
+    max-width: 100%;
   }
 
   .features__container2 {
     padding: 0px 20px 0px 20px;
-  }
-
-  .box__container {
-    padding: 40px;
   }
 
   /*--- TESTIMONIALS SECTION ---*/
