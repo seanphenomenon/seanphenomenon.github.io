@@ -98,7 +98,42 @@ nav {
 
 .right-arrow {
   color: var(--purple);
-  padding-left: 10px;
+  margin-left: 5px;
+  /*---*/
+  position: relative;
+  display: inline-block;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 2.5px;
+  box-shadow: inset 0 0 0 2px;
+  width: 20px;
+  height: 6px;
+}
+
+.right-arrow:after {
+  content: "";
+  display: inline-block;
+  border-radius: 4px;
+  width: 11px;
+  height: 2px;
+  background-color: var(--purple);
+  transform: rotate(45deg);
+  position: absolute;
+  right: -1.2px;
+  bottom: 4px;
+}
+
+.right-arrow:before {
+  content: "";
+  display: inline-block;
+  border-radius: 4px;
+  width: 11px;
+  height: 2px;
+  background-color: var(--purple);
+  transform: rotate(-45deg);
+  position: absolute;
+  right: -1.2px;
+  bottom: -4px;
 }
 
 .burger {
@@ -342,11 +377,11 @@ nav {
 .testimonials__container {
   max-width: 100%;
   width: 1118px;
-  height: 50%;
+  height: 100%;
   background-color: var(--purple);
   border-radius: 50px;
   align-items: center;
-  padding: 40px 40px 10px 50px;
+  padding: 40px 0px 40px 40px;
   margin-top: 5em;
   margin-bottom: 5em;
 }
@@ -361,7 +396,10 @@ nav {
 
 .testimonials__profile__container {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-container {
@@ -378,15 +416,17 @@ nav {
 .card-container__jenny {
   height: 330px;
   /* background-color: var(--white); */
-  background: linear-gradient(to left, #9c69e2 0%, #ffffff 60%);
+  background: linear-gradient(to left, #9c69e2 9.75%, #ffffff 100%);
   border-radius: 20px;
   margin: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  width: 500px;
+  width: 400px;
+  left: 750px;
   opacity: 1;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  position: absolute;
 }
 
 .card {
@@ -420,12 +460,15 @@ nav {
 .card__content p {
   color: var(--gray);
   font-family: var(--body-font-family);
+  line-height: 32.4px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .control__container {
   display: flex;
   justify-content: space-between;
-  margin: 50px;
+  margin: 30px;
 }
 
 .control__circle {
@@ -458,21 +501,109 @@ nav {
 
 .control__left__arrow--active {
   color: var(--white);
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.control__right__arrow {
-  color: lightgrey;
-  font-size: 40px;
-  padding-left: 20px;
-  opacity: 50%;
-  cursor: pointer;
-}
-
-.control__right__arrow:hover {
   color: var(--white);
-  opacity: 100%;
+  margin-right: 0;
+  margin-top: 1.5em;
+  /*---*/
+  position: relative;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 2.5px;
+  box-shadow: inset 0 0 0 2px;
+  width: 40px;
+  height: 6px;
+  cursor: pointer;
+  float: left;
+}
+
+.control__left__arrow--active:after {
+  content: "";
+  display: inline-block;
+  border-radius: 4px;
+  width: 11px;
+  height: 2px;
+  background-color: var(--white);
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 0px;
+  bottom: 4px;
+}
+
+.control__left__arrow--active:before {
+  content: "";
+  display: inline-block;
+  border-radius: 4px;
+  width: 11px;
+  height: 2px;
+  background-color: var(--white);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0px;
+  bottom: -4px;
+}
+
+.control__left__arrow--active:hover {
+  color: var(--white);
+}
+
+.control__left__arrow--active:hover:before {
+  color: var(--white);
+}
+
+.control__right__arrow--active {
+  color: lightgrey;
+  margin-left: 30px;
+  margin-top: 1.5em;
+  margin-right: 1em;
+  /*---*/
+  position: relative;
+  display: inline-block;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 2.5px;
+  box-shadow: inset 0 0 0 2px;
+  width: 20px;
+  height: 6px;
+  cursor: pointer;
+  float: left;
+}
+
+.control__right__arrow--active:after {
+  content: "";
+  display: inline-block;
+  border-radius: 4px;
+  width: 11px;
+  height: 2px;
+  background-color: lightgrey;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -1.2px;
+  bottom: 4px;
+}
+
+.control__right__arrow--active:before {
+  content: "";
+  display: inline-block;
+  border-radius: 4px;
+  width: 11px;
+  height: 2px;
+  background-color: lightgrey;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: -1.2px;
+  bottom: -4px;
+}
+
+.control__right__arrow--active:hover {
+  color: var(--white);
+}
+
+.control__right__arrow--active:hover:before {
+  color: var(--white);
+}
+
+.control__right__arrow--active:hover:after {
+  color: var(--white);
 }
 
 /*--- FOOTER  SECTION ---*/
@@ -738,9 +869,29 @@ nav {
   }
 
   /*--- TESTIMONIALS SECTION ---*/
+  .testimonials__container {
+    padding: 40px 0px 10px 40px;
+  }
+
+  .testimonials__profile__container {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .card-container {
+    width: 600px;
+  }
 
   .card-container__jenny {
     width: 260px;
+    left: 650px;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .card-container__jenny .card__content p {
+    line-height: 25px;
   }
 
   /* FOOTER SECTION */
@@ -815,7 +966,8 @@ nav {
 
   .testimonials__container {
     text-align: center;
-    padding-bottom: 50px;
+    padding: 40px;
+    width: 100%;
   }
 
   .testimonials__title {
@@ -836,6 +988,14 @@ nav {
     opacity: 100%;
     border-radius: 20px;
     background: var(--white);
+    width: 100%;
+    left: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card__content {
+    text-align: left;
   }
 
   .control__container {
@@ -962,6 +1122,13 @@ nav {
 
   .card__content {
     padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .card__content p {
+    text-align: left;
+    padding: 0px 20px 0 20px;
   }
 
   /*--- BOTTOM FOOTER SECTION ---*/
