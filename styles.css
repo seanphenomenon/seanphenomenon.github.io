@@ -11,8 +11,8 @@
   --purple: #9c69e2;
   --pink: #f063b8;
   --seafoam: #68c9ba;
-  --body-font-family: "Avenir";
-  --headings-font-family: "Helvetica";
+  --body-font-family: 'Avenir';
+  --headings-font-family: 'Helvetica';
 }
 
 /* NAV SECTION */
@@ -111,7 +111,7 @@ nav {
 }
 
 .right-arrow:after {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 4px;
   width: 11px;
@@ -124,7 +124,7 @@ nav {
 }
 
 .right-arrow:before {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 4px;
   width: 11px;
@@ -147,6 +147,10 @@ nav {
   background-color: black;
   margin: 5px;
   transition: all 0.3s ease;
+}
+
+.closebtn {
+  visibility: hidden;
 }
 
 /* HERO CONTAINER */
@@ -236,7 +240,6 @@ nav {
   max-width: 50%;
   padding-left: 15px;
   padding-right: 15px;
-  border: 2px solid blue;
 }
 
 .content {
@@ -515,7 +518,7 @@ nav {
 }
 
 .control__left__arrow--active::after {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 4px;
   width: 11px;
@@ -528,7 +531,7 @@ nav {
 }
 
 .control__left__arrow--active::before {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 4px;
   width: 11px;
@@ -557,7 +560,7 @@ nav {
 }
 
 .control__right__arrow--active::after {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 4px;
   width: 11px;
@@ -570,7 +573,7 @@ nav {
 }
 
 .control__right__arrow--active::before {
-  content: "";
+  content: '';
   display: inline-block;
   border-radius: 4px;
   width: 11px;
@@ -804,30 +807,10 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
-  /* --- NAV SECTION ---*/
-  .nav {
-    visibility: hidden;
-  }
-
-  .nav__demo__button--active {
-    margin-left: 10px;
-    display: none;
-  }
-
-  .nav__demo__button--active {
-    margin-left: 10px;
-    display: none;
-  }
-
-  .burger {
-    display: block;
-    cursor: pointer;
-  }
-
   /* HERO SECTION */
   .hero__container {
     margin-bottom: 0;
-    align-items: center;
+    align-items: left;
   }
 
   .hero__title {
@@ -845,6 +828,7 @@ nav {
   }
 
   /*--- STORAGE SECTION ---*/
+
   .storage__text {
     font-size: 16px;
   }
@@ -859,6 +843,7 @@ nav {
   }
 
   /*--- TESTIMONIALS SECTION ---*/
+
   .testimonials__container {
     padding: 40px 0px 10px 40px;
   }
@@ -892,15 +877,78 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  /*--- NAV SECTION ---*/
+  /*-- NAV SECTION --*/
 
   .nav__container {
-    grid-template-columns: 50px 200px;
+    display: grid;
+    grid-template-columns: 50px 100px;
+    grid-gap: 20px;
+    align-items: center;
+    padding: 2px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    transition: 0.3s;
+  }
+
+  .nav__item--active a {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
+  }
+
+  .nav__item--active a,
+  .nav__link {
+    padding: 8px;
+    font-size: 18px;
+    color: var(--white);
+    font-weight: bold;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .nav__link:hover {
+    color: rgb(184, 179, 179);
+    font-weight: bold;
+  }
+
+  .closebtn {
+    visibility: visible;
+    position: absolute;
+    top: 15px;
+    left: 80vw;
+    font-size: 4em;
+    text-decoration: none;
+    color: var(--pink);
+  }
+
+  .nav__demo__button--active {
+    margin-left: 10px;
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
   }
 
   /*--- HERO SECTION ---*/
+
   .hero__container {
-    align-items: center;
+    align-items: left;
     height: 100%;
   }
 
@@ -1032,11 +1080,26 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
+  /*-- NAV SECTION -- */
+
+  .nav__item--active a,
+  .nav__link {
+    font-size: 18px;
+  }
+
+  .closebtn {
+    position: absolute;
+    display: block;
+    font-size: 4em;
+    top: 10px;
+  }
+
   /*-- TOP HERO SECTION --*/
+
   .hero__container {
     margin-bottom: 2em;
     height: 100%;
-    padding: 20px;
+    padding: 40px;
     align-items: flex-start;
   }
 
