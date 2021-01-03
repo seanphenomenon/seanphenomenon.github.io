@@ -15,6 +15,28 @@
   --headings-font-family: 'Helvetica';
 }
 
+/* SCROLL TO TOP BUTTON */
+#btnScrollToTop {
+  position: fixed;
+  display: none;
+  right: 10px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--seafoam);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: var(--white);
+  font-family: var(--headings-font-family);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#btnScrollToTop:active {
+  background-color: #42a193;
+}
+
 /* NAV SECTION */
 
 nav {
@@ -110,7 +132,7 @@ nav {
   height: 6px;
 }
 
-.right-arrow:after {
+.right-arrow::after {
   content: '';
   display: inline-block;
   border-radius: 4px;
@@ -123,7 +145,7 @@ nav {
   bottom: 4px;
 }
 
-.right-arrow:before {
+.right-arrow::before {
   content: '';
   display: inline-block;
   border-radius: 4px;
